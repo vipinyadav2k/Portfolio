@@ -1,0 +1,26 @@
+.intro-screen {
+    position: fixed;
+    z-index: 1000; // or higher than your app content if needed
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .intro-letter {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    width: 6vw;
+    text-align: center;
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  

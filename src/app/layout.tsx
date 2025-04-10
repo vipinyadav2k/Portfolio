@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import FallingStars from "@/components/FallingStars";
+import IntroScreen from "@/components/IntroScreen";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-black ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <IntroScreen />
+        <FallingStars />
+
         {children}
       </body>
     </html>
