@@ -38,10 +38,11 @@ export function HoverBorderGradient({
   const movingMap: Record<Direction, string> = {
     TOP: "radial-gradient(60% 150% at 50% 0%, hsl(0, 0%, 100%) 20%, rgba(255, 255, 255, 0) 100%)",
     LEFT: "radial-gradient(60% 150% at 0% 50%, hsl(0, 0%, 100%) 20%, rgba(255, 255, 255, 0) 100%)",
-    BOTTOM: "radial-gradient(60% 150% at 50% 100%, hsl(0, 0%, 100%) 20%, rgba(255, 255, 255, 0) 100%)",
-    RIGHT: "radial-gradient(60% 150% at 100% 50%, hsl(0, 0%, 100%) 20%, rgba(255, 255, 255, 0) 100%)",
+    BOTTOM:
+      "radial-gradient(60% 150% at 50% 100%, hsl(0, 0%, 100%) 20%, rgba(255, 255, 255, 0) 100%)",
+    RIGHT:
+      "radial-gradient(60% 150% at 100% 50%, hsl(0, 0%, 100%) 20%, rgba(255, 255, 255, 0) 100%)",
   };
-  
 
   const highlight =
     "radial-gradient(75% 181.15942028985506% at 50% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)";
@@ -56,9 +57,7 @@ export function HoverBorderGradient({
   }, [hovered]);
   return (
     <Tag
-      onMouseEnter={(_event: React.MouseEvent<HTMLDivElement>) => {
-        setHovered(true);
-      }}
+      onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={cn(
         "relative flex rounded-3xl border  content-center bg-black/20 hover:bg-black/10 transition duration-500  items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
@@ -79,10 +78,10 @@ export function HoverBorderGradient({
           "flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]"
         )}
         style={{
-            filter: "blur(12px)",
-            position: "absolute",
-            width: "100%",
-            height: "100%",
+          filter: "blur(12px)",
+          position: "absolute",
+          width: "100%",
+          height: "100%",
         }}
         initial={{ background: movingMap[direction] }}
         animate={{
