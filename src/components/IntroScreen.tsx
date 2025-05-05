@@ -25,7 +25,7 @@ const IntroScreen: React.FC = () => {
           opacity: 0,
           clipPath: "inset(0% 0% 0% 0%)",
           duration: 0.5,
-          ease: "power2.inOut",
+          ease: "power1.inOut",
         },
         i * 0.2
       );
@@ -39,7 +39,7 @@ const IntroScreen: React.FC = () => {
           opacity: 0,
           clipPath: "inset(0% 0% 0% 0%)",
           duration: 0.5,
-          ease: "power2.inOut",
+          ease: "power1.inOut",
         },
         i * 0.2 // same time sync as VIPIN
       );
@@ -50,7 +50,7 @@ const IntroScreen: React.FC = () => {
       containerRef.current,
       {
         opacity: 0,
-        duration: 0.8,
+        duration: 0.9,
         delay: 0.4,
         onComplete: () => {
           if (containerRef.current) {

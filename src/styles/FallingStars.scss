@@ -14,16 +14,17 @@ $shadows-medium: multiple-box-shadow(100);
 $shadows-big: multiple-box-shadow(50);
 
 .falling-stars-wrapper {
-    position: fixed; // makes it stick to the viewport
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; // keeps it behind all content
-    pointer-events: none; // makes it non-interactive
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    overflow: hidden;
-  }
+  position: fixed; // makes it stick to the viewport
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; // keeps it behind all content
+  pointer-events: none; // makes it non-interactive
+  background: linear-gradient(to bottom right, #11aac533, transparent, #1882b422);
+  overflow: hidden;
+}
+
 
 .stars {
   position: absolute;
